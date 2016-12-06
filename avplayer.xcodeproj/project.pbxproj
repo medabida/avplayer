@@ -14,6 +14,7 @@
 		CCAB2D171DF6C6BD00A8DC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2D161DF6C6BD00A8DC5E /* Assets.xcassets */; };
 		CCAB2D1A1DF6C6BD00A8DC5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2D181DF6C6BD00A8DC5E /* LaunchScreen.storyboard */; };
 		CCAB2D221DF6C7C100A8DC5E /* bet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2D211DF6C7C000A8DC5E /* bet.mp3 */; };
+		CCAB2D261DF6C8E500A8DC5E /* MYAudioTapProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2D251DF6C8E500A8DC5E /* MYAudioTapProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		CCAB2D191DF6C6BD00A8DC5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCAB2D1B1DF6C6BD00A8DC5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCAB2D211DF6C7C000A8DC5E /* bet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bet.mp3; sourceTree = "<group>"; };
+		CCAB2D231DF6C8E400A8DC5E /* avplayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "avplayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		CCAB2D241DF6C8E500A8DC5E /* MYAudioTapProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAudioTapProcessor.h; sourceTree = "<group>"; };
+		CCAB2D251DF6C8E500A8DC5E /* MYAudioTapProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAudioTapProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,9 @@
 				CCAB2D181DF6C6BD00A8DC5E /* LaunchScreen.storyboard */,
 				CCAB2D1B1DF6C6BD00A8DC5E /* Info.plist */,
 				CCAB2D131DF6C6BD00A8DC5E /* avplayer.xcdatamodeld */,
+				CCAB2D241DF6C8E500A8DC5E /* MYAudioTapProcessor.h */,
+				CCAB2D251DF6C8E500A8DC5E /* MYAudioTapProcessor.m */,
+				CCAB2D231DF6C8E400A8DC5E /* avplayer-Bridging-Header.h */,
 			);
 			path = avplayer;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 					CCAB2D081DF6C6BC00A8DC5E = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 498HW5FJU7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -145,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAB2D0F1DF6C6BC00A8DC5E /* ViewController.swift in Sources */,
+				CCAB2D261DF6C8E500A8DC5E /* MYAudioTapProcessor.m in Sources */,
 				CCAB2D151DF6C6BD00A8DC5E /* avplayer.xcdatamodeld in Sources */,
 				CCAB2D0D1DF6C6BC00A8DC5E /* AppDelegate.swift in Sources */,
 			);
@@ -267,11 +276,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 498HW5FJU7;
 				INFOPLIST_FILE = avplayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.med..avplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "avplayer/avplayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -280,11 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 498HW5FJU7;
 				INFOPLIST_FILE = avplayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.med..avplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "avplayer/avplayer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -308,6 +322,7 @@
 				CCAB2D201DF6C6BD00A8DC5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
